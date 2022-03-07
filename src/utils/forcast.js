@@ -16,7 +16,10 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        `${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees out. Feels like ${body.current.feelslike} degrees outside.`
+        `${body.current.weather_descriptions[0]}. It is currently ${body.current.temperature} degrees out. Feels like ${body.current.feelslike} degrees outside.
+        The current wind speed is ${body.current.wind_speed}mph and wind direction is ${body.current.wind_dir}.
+        Humidity is ${body.current.humidity}% and uv index is ${body.current.uv_index}.
+        Air pressure is ${body.current.pressure}hpa.`
       );
     }
     // {
